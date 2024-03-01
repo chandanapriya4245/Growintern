@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Portfolio</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+    <script src="https://kit.fontawesome.com/12728ef01b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/imag022.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hey,<br>This is <span>Chandanapriya</span></br> </h1>
+            </div>
+        </div>
+    </div>
+    <!-------About----->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/imag003.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a passionate Python programmer on a thrilling journey through the intricate landscapes of coding
+                        and software development. Originally from Vijayawada,
+                        I've found my calling in crafting innovative solutions and navigating the digital
+                        world through the power of Python.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                        <p class="tab-links" onclick="opentab('projects', event)">Projects</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>PYTHON</span><br>Application Python Programming </li>
+                            <li><span>INTERFACE DESIGNING</span><br>By using HTML and CSS  </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>PYTHON</span><br>Learned at BDPS Institution</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="projects">
+                        <ul>
+                            <li><span>Devops </span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------services------>
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-codepen"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        Responsive Design: My designs are not just visually stunning but also adapt seamlessly to various
+                         devices, providing a consistent experience for all users</p>
+                         <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-regular fa-crop"></i>
+                    <h2>Python Programming</h2>
+                    <p>Any kind of python application can be implemented</p>
+                         <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------portfolio------->
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/img4.webp">
+                    <div class="layer">
+                        <h3>Food Demand</h3>
+                        <p>Food demand analysis through online with Machine Learning </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="work">
+                    <img src="images/img5">
+                    <div class="layer">
+                        <h3>Devops Project</h3>
+                        <p></p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!----------contact form----------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me </h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0123456789</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-solid fa-copyright"></i>copyright<i class="fa-solid fa-heart"></i> Chandanapriya</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+        function opentab(tabname, event){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
